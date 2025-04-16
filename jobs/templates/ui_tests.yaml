@@ -1,0 +1,15 @@
+- job-template:
+     name: jobs-uploader
+     description: 'Jobs uploader on jenkins'
+     project-type: pipeline
+     parameters:
+      - string:
+          name: REFSPEC
+          default: master
+          description: 'Branch of job uploader'
+      - text:
+          name: YAML_CONFIG
+     pipeline-scm:
+       scm:
+         - ui-tests
+       script-path: pipelines/ui_tests.groovy

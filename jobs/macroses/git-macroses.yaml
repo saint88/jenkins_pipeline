@@ -9,3 +9,13 @@
           branches:
             - FETCH_HEAD
           refspec: $REFSPEC
+
+- scm:
+     name: 'ui-tests'
+     scm:
+     - git:
+          url: git@github.com:saint88/ui_tests.git
+          credentials-id: jenkins
+          branches:
+            - FETCH_HEAD
+          refspec: $REFSPEC
