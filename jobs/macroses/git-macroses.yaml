@@ -4,7 +4,7 @@
      name: 'jobs-updater'
      scm:
      - git:
-          url: git@test.ru
+          url: git@github.com:saint88/jenkins_pipeline.git
           credentials-id: jenkins
           branches:
             - FETCH_HEAD
