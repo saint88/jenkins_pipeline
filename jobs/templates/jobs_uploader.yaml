@@ -4,11 +4,11 @@
      project-type: pipeline
      parameters:
       - string:
-        name: REFSPEC
-        default: master
-        description: 'Branch of job uploader'
+          name: REFSPEC
+          default: master
+          description: 'Branch of job uploader'
       - string:
-        name: Test
+          name: Test
      pipeline-scm:
        scm:
          - jobs-updater
