@@ -1,0 +1,11 @@
+---
+
+- scm:
+     name: 'jobs-updater'
+     scm:
+     - git:
+          url: git@test.ru
+          credentials-id: jenkins
+          branches:
+            - FETCH_HEAD
+          refspec: $REFSPEC

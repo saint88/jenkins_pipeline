@@ -1,0 +1,6 @@
+---
+
+- project:
+     name: "Jobs uploader"
+     jobs:
+       - "jobs-uploader"

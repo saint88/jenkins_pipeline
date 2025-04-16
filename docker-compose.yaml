@@ -1,0 +1,37 @@
+version: "3.7"
+
+services:
+  registry:
+    image: registry:latest
+    restart: always
+    ports:
+     - 5005:5005
+    volumes:
+     - /root/jenkins3/registry:/var/lib/registry
+    hostname: registry
+    environment:
+     - REGISTRY_HTTP_ADDR=0.0.0.0:5005
+  jenkins:
+    image: jenkins/jenkins:2.505-jdk21
+    hostname: jenkins
+    privileged: true
+    restart: always
+    user: root
+    environment:
+     - DOCKER_HOST=unix:///var/run/docker.sock
+    volumes:
+     - /root/jenkins_otus/jenkins_home:/var/jenkins_home
+     - /var/run/docker.sock:/var/run/docker.sock
+  nginx:
+    image: nginx:latest
+    hostname: nginx
+    restart: always
+    privileged: true
+    depends_on:
+     - jenkins
+     - registry 
+    ports:
+     - 80:80
+    volumes:
+     - /root/jenkins3/nginx:/etc/nginx/conf.d
+     - /etc/localtime:/etc/localtime
