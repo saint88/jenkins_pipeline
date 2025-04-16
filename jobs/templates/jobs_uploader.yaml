@@ -7,8 +7,6 @@
           name: REFSPEC
           default: master
           description: 'Branch of job uploader'
-      - string:
-          name: Test
      pipeline-scm:
        scm:
          - jobs-updater
