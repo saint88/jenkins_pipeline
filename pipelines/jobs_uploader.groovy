@@ -16,7 +16,7 @@ timeout(300) {
         stage('Generate job.ini config') {
             dir('api-tests') {
                 withCredentials([usernamePassword(credentialsId: 'jobs_builder_creds', usernameVariable: 'username', passwordVariable: 'password')]) {
-                    sh "USER=${username} PASSWORD=${password}  python3 ${configScriptPath}"
+                    sh "USER=${username} PASSWORD=${password}  python ${configScriptPath}"
                 }
             }
         }
