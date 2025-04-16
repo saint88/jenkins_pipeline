@@ -1,6 +1,6 @@
 ---
 
 - project:
-     name: "Jobs uploader"
+     name: jobs-uploader
      jobs:
-       - "jobs-uploader"
+       - 'jobs-uploader'

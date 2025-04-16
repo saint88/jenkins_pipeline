@@ -26,4 +26,5 @@ timeout(300) {
                 sh "jenkins-jobs --conf ./config/job.ini update ./jobs/"
             }
         }
+    }
 }

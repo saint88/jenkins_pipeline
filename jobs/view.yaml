@@ -11,4 +11,4 @@
       - weather
       - build-button
     job-name:
-      - jobs-uploader 
+      - 'jobs-uploader'
