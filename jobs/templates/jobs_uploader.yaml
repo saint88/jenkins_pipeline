@@ -3,10 +3,12 @@
      description: 'Jobs uploader on jenkins'
      project-type: pipeline
      parameters:
-       - string:
-            name: REFSPEC
-            default: master
-            description: 'Branch of job uploader'
+      - string:
+        name: REFSPEC
+        default: master
+        description: 'Branch of job uploader'
+      - string:
+        name: Test
      pipeline-scm:
        scm:
          - jobs-updater
